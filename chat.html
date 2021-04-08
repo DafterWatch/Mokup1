@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .item1 { grid-area: crearGrupos; }
+        .item2 { grid-area: notif; }
+        .item3 { grid-area: mensaje; }
+        .item4 { grid-area: tarea; }
+        
+        .grid-container {
+          display: grid;
+          grid-template-areas:
+            'crearGrupos crearGrupos notif'
+            'mensaje tarea notif'
+            'mensaje tarea notif';
+            gap: 2px;
+          background-color: black;
+        }
+        
+        .grid-container > div {
+          background-color: rgba(255, 255, 255, 0.8);
+          text-align: center;
+          /*font-size: 30px;*/
+        }
+        .item1{           
+            height: 310px;
+            width: 100%;
+        }
+        .item2{            
+            height: 100%;
+            width: 94.5%;
+        }
+        .item3{           
+            height: 310px;
+            width: 100%;
+        }
+        .item4{            
+            height: 310px;
+            width: 100%;
+        }
+        .inputCrear{
+            float: left;
+            margin-top: 10px;
+            margin-left: 30%;
+            width: 400px;
+            height: 25px;            
+        }
+        #txtCrear{
+            color: black;
+            height: 20px;            
+            width: 99.5%; 
+            left: 0;
+            top: 0;
+            padding-top:5px;
+            text-align: left;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        #btnCrearGrupo{
+            height: 40px;
+            width: 100px;
+            float: left;
+            margin-left: 45%;
+        }
+        .inputMensaje{
+            float: left;
+            margin-top: 40px;
+            margin-left: 15%;
+            width: 300px;
+            height: 25px;         
+        }
+        #btnMensaje{
+            height: 40px;
+            width: 100px;
+            float: left;
+            margin-left: 35%;
+        }
+        .inputTrabajo{
+            float: left;
+            margin-top: 10px;
+            margin-left: 15%;
+            width: 300px;
+            height: 25px;         
+        }
+        #btnTrabajo{
+            height: 40px;
+            width: 100px;
+            float: left;
+            margin-left: 35%;
+        }
+    </style>
+    <title>MEAN PREALPHA</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <div id="txtCrear">CREAR GRUPO</div><br>
+            <input type="text" class="inputCrear" placeholder="Nombre Grupo"><br>
+            <input type="text" class="inputCrear" placeholder="ID Grupo"><br>
+            <input type="text" class="inputCrear" placeholder="ID Usuarios"><br><br><br><br><br><br>
+            <button id="btnCrearGrupo">Crear</button>
+        </div>
+        <div class="item2">
+            <div id="txtCrear">NOTIFICACIONES</div><br>
+            <div id="notificaciones"></div>
+            <button onclick="location.href='index.html'">Volver Login</button>
+        </div>
+        <div class="item3">
+            <div id="txtCrear">MANDAR MENSAJE</div><br>
+            <input type="text" class="inputMensaje" placeholder="Mensaje"><br><br><br>
+            <input type="text" class="inputMensaje" placeholder="ID Grupo"><br><br><br><br><br><br><br>
+            <button id="btnMensaje">Enviar</button>
+        </div>  
+        <div class="item4">
+            <div id="txtCrear">ASIGNAR TRABAJO</div><br>
+            <input type="text" class="inputTrabajo" placeholder="Fecha inicio"><br>
+            <input type="text" class="inputTrabajo" placeholder="Fecha final"><br>
+            <input type="text" class="inputTrabajo" placeholder="Trabajo"><br><br><br>
+            <input type="text" class="inputTrabajo" placeholder="ID Grupo"><br><br><br><br><br>
+            <button id="btnTrabajo">Asignar</button>
+        </div>        
+    </div>
+</body>
+</html>
