@@ -4,15 +4,47 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/main.css">
     <title>MEAN PREALPHA</title>
+    <link rel="shortcut icon" href="#">
 </head>
 <body>
     <div class="container" id="main">        
         <input type="text" placeholder="NOMBRE" id="txtNombre">
         <input type="number" placeholder="ID" id="txtId">
-        <p id="errores" style="display: none;"></p>
+        <p id="errores" style="color: red;"></p>
         <!--<button onclick="location.href='chat.html'" id="btnLogin">ENTRAR</button>-->
         <button id="btnLogin">ENTRAR</button>
       </div>
+    <!--Cuerpo del chat -->  
+
+    <div class="grid-container" style="display: none;" id="chatContainer">
+        <div class="item1">
+            <div id="txtCrear">CREAR GRUPO</div><br>
+            <input type="text" class="inputCrear" placeholder="Nombre Grupo" id="txtNombreGrupo"><br>
+            <input type="text" class="inputCrear" placeholder="ID Grupo" id="txtIdGrupo"><br>
+            <input type="text" class="inputCrear" placeholder="ID Usuarios" id="txtIdUsuarios"><br><br><br><br><br><br>
+            <button id="btnCrearGrupo">Crear</button>
+        </div>
+        <div class="item2">
+            <div id="txtCrear">NOTIFICACIONES</div><br>
+            <div id="notificaciones"></div>
+            <button onclick="location.href='index.html'">Volver Login</button>
+        </div>
+        <div class="item3">
+            <div id="txtCrear">MANDAR MENSAJE</div><br>
+            <input type="text" class="inputMensaje" placeholder="Mensaje" id="txtMensajeGrupo"><br><br><br>
+            <input type="text" class="inputMensaje" placeholder="ID Grupo" id="txtIDMensajeGrupo"><br><br><br><br><br><br><br>
+            <button id="btnMensaje">Enviar</button>
+        </div>  
+        <div class="item4">
+            <div id="txtCrear">ASIGNAR TRABAJO</div><br>
+            <input type="text" class="inputTrabajo" placeholder="Fecha inicio"><br>
+            <input type="text" class="inputTrabajo" placeholder="Fecha final"><br>
+            <input type="text" class="inputTrabajo" placeholder="Trabajo"><br><br><br>
+            <input type="text" class="inputTrabajo" placeholder="ID Grupo"><br><br><br><br><br>
+            <button id="btnTrabajo">Asignar</button>
+        </div>        
+    </div> 
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./socket.io/socket.io.js"></script>
     <script src="./js/main.js"></script>
